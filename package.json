@@ -17,5 +17,10 @@
     "typescript": "^2.4.2",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
+  },
+  "dependencies": {
+    "@types/pusher-js": "^3.0.29",
+    "pusher-js": "^4.1.0",
+    "ramda": "^0.24.1"
   }
 }
