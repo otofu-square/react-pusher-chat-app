@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "main": "index.js",
   "repository": "ssh://git@github.com/otofu-square/react-pusher-chat-app.git",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "build": "tsc"
+  },
   "devDependencies": {
     "@types/node": "^8.0.17",
     "@types/ramda": "^0.24.5",
