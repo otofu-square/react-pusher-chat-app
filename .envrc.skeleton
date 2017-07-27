@@ -1,0 +1,14 @@
+# Pusher
+export PUSHER_APP_ID={Pusher App ID}
+export PUSHER_KEY={Pusher Key}
+export PUSHER_SECRET={Pusher Secret}
+export PUSHER_CLUSTER={Pusher Cluster}
+
+# Amazon Web Service
+export AWS_ACCESS_KEY_ID={aws_access_key_id}
+export AWS_SECRET_ACCESS_KEY={aws_secret_access_key}
+export AWS_DEFAULT_REGION=us-west-2
+export AWS_DEFAULT_OUTPUT=json
+
+# Serverless Framework
+export STAGE=dev
