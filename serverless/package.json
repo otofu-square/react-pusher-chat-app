@@ -1,0 +1,11 @@
+{
+  "name": "serverless-react-pusher-chat-app",
+  "version": "0.0.1",
+  "repository": "ssh://git@github.com/otofu-square/react-pusher-chat-app.git",
+  "devDependencies": {
+    "@types/aws-lambda": "^0.0.15",
+    "@types/node": "^8.0.17",
+    "aws-sdk": "^2.91.0",
+    "serverless-plugin-typescript": "0.5.0"
+  }
+}
