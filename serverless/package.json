@@ -5,7 +5,12 @@
   "devDependencies": {
     "@types/aws-lambda": "^0.0.15",
     "@types/node": "^8.0.17",
+    "@types/pusher-js": "^3.0.29",
     "aws-sdk": "^2.91.0",
     "serverless-plugin-typescript": "0.5.0"
+  },
+  "dependencies": {
+    "pusher-js": "^4.1.0",
+    "ramda": "^0.24.1"
   }
 }
