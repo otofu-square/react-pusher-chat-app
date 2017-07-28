@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './client/index.tsx',
+  entry: './src/index.tsx',
   output: {
     filename: 'bundle.js',
     path: __dirname + '/build',
@@ -24,7 +24,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'client/index.html',
+      template: './src/index.html',
+    }),
+    new webpack.DefinePlugin({
+      'process.env.PUSHER_KEY': JSON.stringify(process.env.PUSHER_KEY),
+      'process.env.PUSHER_CLUSTER': JSON.stringify(process.env.PUSHER_CLUSTER),
     }),
   ],
 };

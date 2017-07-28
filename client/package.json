@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@types/node": "^8.0.17",
+    "@types/pusher-js": "^3.0.29",
     "@types/ramda": "^0.24.5",
     "@types/react": "^15.0.39",
     "@types/react-dom": "^15.5.1",
@@ -24,7 +25,6 @@
     "webpack-dev-server": "^2.6.1"
   },
   "dependencies": {
-    "@types/pusher-js": "^3.0.29",
     "pusher-js": "^4.1.0",
     "ramda": "^0.24.1"
   }
