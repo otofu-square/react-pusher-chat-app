@@ -10,9 +10,25 @@ functions:
     handler: src/pusher.execute
     environment:
       STAGE: ${env:STAGE}
+      PUSHER_APP_ID: ${env:PUSHER_APP_ID}
+      PUSHER_KEY: ${env:PUSHER_KEY}
+      PUSHER_SECRET: ${env:PUSHER_SECRET}
+      PUSHER_CLUSTER: ${env:PUSHER_CLUSTER}
     events:
       - http:
           path: /pusher
+          method: post
+  lineWebhook:
+    handler: src/lineWebhook.execute
+    environment:
+      STAGE: ${env:STAGE}
+      PUSHER_APP_ID: ${env:PUSHER_APP_ID}
+      PUSHER_KEY: ${env:PUSHER_KEY}
+      PUSHER_SECRET: ${env:PUSHER_SECRET}
+      PUSHER_CLUSTER: ${env:PUSHER_CLUSTER}
+    events:
+      - http:
+          path: /webhook
           method: post
 
 plugins:

@@ -8,7 +8,7 @@ export const execute = (
   callback: Callback,
 ) => {
   pusher.trigger("my-channel", "my-event", {
-    message: "Hello World",
+    message: JSON.stringify(JSON.parse(event.body as string).events[0].message),
   });
   const response = {
     statusCode: 200,
