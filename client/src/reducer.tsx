@@ -9,7 +9,8 @@ const initialState = {
 const reducer = (state: IState = initialState, action: any) => {
   switch (action.type) {
     case "PUSHER_EVENT":
-      return { messages: [...state.messages, action.payload] };
+      console.log(action.payload);
+      return state;
     default:
       return state;
   }
