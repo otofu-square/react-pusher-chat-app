@@ -1,15 +1,13 @@
-import * as Pusher from "pusher-js";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 
 import App from "./App";
+import store from "./store";
 
-const pusher = new Pusher(process.env.PUSHER_KEY as string, {
-  cluster: process.env.PUSHER_CLUSTER,
-  encrypted: true,
-});
-const channel = pusher.subscribe("my-channel");
-
-const Root = () => <App messages={[]} channel={channel} />;
+const Root = () =>
+  <Provider store={store}>
+    <App />
+  </Provider>;
 
 ReactDOM.render(<Root />, document.getElementById("root"));
