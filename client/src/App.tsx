@@ -1,10 +1,13 @@
 import * as React from "react";
+import { connect } from "react-redux";
 
-interface IProps {
-  messages: string[];
-}
+import { IGlobalState } from "./models";
 
-const App = ({ messages }: IProps) =>
+const mapStateToProps = (state: IGlobalState) => ({
+  messages: state.messages,
+});
+
+const App = ({ messages }: IGlobalState) =>
   <div>
     <h1>Hello World</h1>
     {messages.map(message =>
@@ -14,4 +17,4 @@ const App = ({ messages }: IProps) =>
     )}
   </div>;
 
-export default App;
+export default connect(mapStateToProps)(App);
