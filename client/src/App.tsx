@@ -1,37 +1,20 @@
 import * as React from "react";
+import { connect } from "react-redux";
 
-interface IProps {
-  messages: string[];
-  channel: any;
-}
+import { IGlobalState } from "./models";
 
-class App extends React.Component<IProps, {}> {
-  public messages: string[];
-  public channel: any;
+const mapStateToProps = (state: IGlobalState) => ({
+  messages: state.messages,
+});
 
-  constructor(props: IProps) {
-    super();
-    this.messages = props.messages;
-    this.channel = props.channel;
-  }
+const App = ({ messages }: IGlobalState) =>
+  <div>
+    <h1>Hello World</h1>
+    {messages.map(message =>
+      <p key={message.id}>
+        {message.text}
+      </p>,
+    )}
+  </div>;
 
-  public onUpdate = (data: any) => {
-    console.log(data);
-  }
-
-  public render() {
-    this.channel.bind("my-event", this.onUpdate);
-    return (
-      <div>
-        <h1>Hello World</h1>
-        {this.messages.map(message =>
-          <p key={message}>
-            {message}
-          </p>,
-        )}
-      </div>
-    );
-  }
-}
-
-export default App;
+export default connect(mapStateToProps)(App);
