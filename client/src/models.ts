@@ -1,3 +1,8 @@
 export interface IGlobalState {
-  messages: string[];
+  messages: IMessage[];
+}
+
+export interface IMessage {
+  id: string;
+  text: string;
 }

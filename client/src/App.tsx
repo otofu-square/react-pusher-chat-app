@@ -11,8 +11,8 @@ const App = ({ messages }: IGlobalState) =>
   <div>
     <h1>Hello World</h1>
     {messages.map(message =>
-      <p key={message}>
-        {message}
+      <p key={message.id}>
+        {message.text}
       </p>,
     )}
   </div>;
