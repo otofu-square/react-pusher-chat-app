@@ -7,6 +7,7 @@
     "@types/node": "^8.0.17",
     "@types/pusher-js": "^3.0.29",
     "aws-sdk": "^2.91.0",
+    "serverless": "^1.18.1",
     "serverless-plugin-typescript": "0.5.0"
   },
   "dependencies": {
