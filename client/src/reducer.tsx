@@ -2,6 +2,7 @@ import { IGlobalState } from "./models";
 
 const initialState = {
   messages: [],
+  inputForm: "",
 };
 
 const reducer = (state: IGlobalState = initialState, action: any) => {
