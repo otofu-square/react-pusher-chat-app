@@ -11,6 +11,14 @@ const reducer = (state: IGlobalState = initialState, action: any) => {
       return {
         messages: [...state.messages, JSON.parse(action.payload.message)],
       };
+    case "UPDATE_INPUT_FORM":
+      return { ...state, inputForm: action.paylaod };
+    case "SUBMIT_REQUEST":
+      return state;
+    case "SUBMIT_FAILURE":
+      return state;
+    case "SUBMIT_SUCCESS":
+      return state;
     default:
       return state;
   }
