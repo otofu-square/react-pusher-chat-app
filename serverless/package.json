@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "repository": "ssh://git@github.com/otofu-square/react-pusher-chat-app.git",
   "devDependencies": {
+    "@line/bot-sdk": "^2.0.0",
     "@types/aws-lambda": "^0.0.15",
     "@types/node": "^8.0.17",
     "@types/pusher-js": "^3.0.29",
