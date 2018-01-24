@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="//fonts.googleapis.com/css?family=Titillium+Web:700|Source+Serif+Pro:400,700|Merriweather+Sans:400,700|Source+Sans+Pro:400,300,600,700,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
     <title>react-pusher-chat-app</title>
+    <style media="screen">
+      .chat-box {
+        width: 100%;
+        height: auto;
+        overflow: hidden; /*floatの解除*/
+        margin-bottom: 20px;
+      }
+      .chat-face {
+        float: left;
+        margin-right: -120px;
+      }
+      .chat-face img{
+        border-radius: 30px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 4px #ddd;
+      }
+      .chat-area {
+        width: 100%;
+        float: right;
+      }
+      .chat-hukidashi {
+        display: inline-block; /*コメントの文字数に合わせて可変*/
+        padding: 15px 20px;
+        margin-left: 120px;
+        margin-top: 10px;
+        border: 1px solid gray;
+        border-radius: 10px;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>

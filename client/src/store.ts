@@ -1,8 +1,8 @@
 import * as Pusher from "pusher-js";
-import { applyMiddleware, createStore } from "redux";
+import { applyMiddleware, compose, createStore } from "redux";
+import { default as thunk } from "redux-thunk";
 
 import { pusherMiddleware } from "./pusherMiddleware";
-
 import reducer from "./reducer";
 
 const pusher = new Pusher(process.env.PUSHER_KEY as string, {
@@ -10,6 +10,10 @@ const pusher = new Pusher(process.env.PUSHER_KEY as string, {
   encrypted: true,
 });
 
-export default applyMiddleware(pusherMiddleware(pusher) as any)(createStore)(
-  reducer,
+export const store = createStore(
+  reducer as any,
+  compose(
+    applyMiddleware(thunk),
+    applyMiddleware(pusherMiddleware(pusher) as any),
+  ),
 );

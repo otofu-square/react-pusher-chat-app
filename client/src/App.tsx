@@ -5,6 +5,7 @@ import { IGlobalState } from "./models";
 
 const mapStateToProps = (state: IGlobalState) => ({
   messages: state.messages,
+  inputForm: state.inputForm,
 });
 
 const App = ({ messages }: IGlobalState) =>

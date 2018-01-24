@@ -10,12 +10,11 @@ export const execute = (
   pusher.trigger("my-channel", "my-event", {
     message: "Hello World",
   });
-  const response = {
+  callback(undefined, {
     statusCode: 200,
     body: JSON.stringify({
       message: "Go Serverless v1.0! Your function executed successfully!",
       input: event,
     }),
-  };
-  callback(undefined, response);
+  });
 };

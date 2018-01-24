@@ -10,5 +10,9 @@ export AWS_SECRET_ACCESS_KEY={aws_secret_access_key}
 export AWS_DEFAULT_REGION=us-west-2
 export AWS_DEFAULT_OUTPUT=json
 
+# LINE Credentials
+export LINE_CHANNEL_ACCESS_TOKEN={LINE Channel Access Token}
+export LINE_CHANNEL_SECRET={LINE Channel Secret}
+
 # Serverless Framework
 export STAGE=dev

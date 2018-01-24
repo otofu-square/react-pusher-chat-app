@@ -30,6 +30,16 @@ functions:
       - http:
           path: /webhook
           method: post
+  sendMessage:
+    handler: src/sendMessage.execute
+    environment:
+      STAGE: ${env:STAGE}
+      LINE_CHANNEL_ACCESS_TOKEN: ${env:LINE_CHANNEL_ACCESS_TOKEN}
+      LINE_CHANNEL_SECRET: ${env:LINE_CHANNEL_SECRET}
+    events:
+      - http:
+          path: /sendMessage
+          method: post
 
 plugins:
   - serverless-plugin-typescript
